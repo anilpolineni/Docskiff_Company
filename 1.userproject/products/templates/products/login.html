@@ -1,0 +1,19 @@
+{% extends 'products/base.html'%}
+{% block content %}
+<style>
+  .helptext{
+    display: none;
+  }
+</style>
+
+<div class="container col-md-4 card card-body mt-3">
+  <h1 class="alert alert-warning text-center">UserLogin</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <strong>{{form.as_p}}</strong>
+    <div class="text-center">
+      <input type="submit" value="Login" class="btn btn-outline-primary mt-2">
+    </div>
+  </form>
+</div>
+{% endblock %}

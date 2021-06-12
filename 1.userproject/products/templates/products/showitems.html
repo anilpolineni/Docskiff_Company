@@ -1,0 +1,28 @@
+{% extends 'products/base.html'%}
+{% block content %}
+
+<div class="container col-md-4 card card-body mt-3">
+  <h1 class="alert alert-danger text-center">ListOfProducts</h1>
+  <table class="table table-bordered table-hover table-stripped">
+    <tr>
+      <thead>
+        <th>S.NO</th>
+        <th>Name</th>
+        <th>Model</th>
+        <th>Cost</th>
+      </thead>
+    </tr>
+    <tr>
+      {% for i in data %}
+      <tbody>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.model}}</td>
+        <td>{{i.cost}}</td>
+      </tbody>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
+{% endblock %}
